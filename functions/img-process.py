@@ -5,11 +5,11 @@ from six.moves import cPickle
 
 
 ## Loads cifar 10 dataset from file
-## @param file_name of cifar dataset
+## @param file_path of cifar dataset
 ## @return raw_float_data - normalised raw img data in 1d array, labels - labels of each img
-## @usage raw_data, labels = load_CIFAR10_dataset(file_name)
-def load_CIFAR10_dataset(file_name):
-    with open(file_name, 'rb') as f:                
+## @usage raw_data, labels = load_CIFAR10_dataset("/path/to/cifar/10/dataset/)
+def load_CIFAR10_dataset(file_path):
+    with open(file_path, 'rb') as f:                
         d = cPickle.load(f)
         # decode utf8
         d_decoded = {}
